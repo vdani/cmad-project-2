@@ -1,0 +1,17 @@
+<div ng-controller="ResponsesController">
+	<h2>Post your Response here !!!</h2>
+	
+	<form id="postResponseForm">
+		<textarea id="tid" name="tid" cols="100" rows="10" ng-model="user.response"></textarea>
+		<input type='button' value='Post Response' ng-click="postResponse(user)"></input>
+	</form>
+	
+	<table style="width: 400px">
+		<tr ng-repeat="user in users">
+			<td>{{user.response}}</td>
+		</tr>
+	</table>
+	
+	<a href="http://localhost:8080/vmongo/index.html#/question">Back to Questions !!!</a>
+	
+</div>

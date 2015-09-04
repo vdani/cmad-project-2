@@ -1,0 +1,29 @@
+
+<div ng-controller="UserController">
+	<div ng-show="successAddForm">
+		<b>Below user is successfully added !!! </b><br><br>
+		<font color="red">{{users}}</font>
+	</div>
+	<div ng-show="showAddForm">
+	<h2>New User Sign In !!!</h2>
+	<form id="userForm">
+		Email <input type="text" ng-model="user.emailId"></input>
+		Password <input type='password' ng-model="user.password"></input>
+		<input type='button' value="Sign In" ng-click="addUser(user)"></input>
+	</form> 
+	<p>
+	<input type=button value="Registered Users Click here" ng-click="activateLogin()"> </input>
+	</div>
+	<br><br>
+	<div ng-show="showLoginForm">
+	<h2>Registered users Login !!!</h2>
+	<form id="validateForm">
+		Email <input type="text" ng-model="user.emailId"></input>
+		Password <input type='password' ng-model="user.password"></input>
+		<input type='button' value="Login" ng-click="validateUser(user)"></input>
+	</form>
+	<p>
+		<input type=button value="New User Click here to register" ng-click="activateSignIn()"> </input>
+	</div>
+	
+</div>
